@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Profile | Health and Wellness</title>
+    <style>
+        /* General body styling */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to bottom right, #e3f2fd, #c8e6c9);
+            background-image: url('https://www.transparenttextures.com/patterns/cubes.png');
+            background-blend-mode: overlay;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            color: #333;
+        }
+
+        /* Main container */
+        .container {
+            text-align: center;
+            width: 90%;
+            max-width: 900px;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Title */
+        h1 {
+            font-size: 36px;
+            color: #2e7d32;
+            margin-bottom: 30px;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Profile details section */
+        .profile-details {
+            background-color: #f1f8e9;
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        .profile-details h3 {
+            color: #388e3c;
+            margin-bottom: 15px;
+            font-size: 24px;
+        }
+
+        .profile-details p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #555;
+        }
+
+        /* Button container */
+        .button-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .button-container a {
+            text-decoration: none;
+            color: white;
+            padding: 15px 20px;
+            background-color: #66bb6a;
+            text-align: center;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: 600;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .button-container a:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>View Profile</h1>
+        
+        <!-- Profile section for Student -->
+        <div id="studentProfile" class="profile-details">
+            <h3>Your Profile</h3>
+            <p id="studentName">Name: John Doe</p>
+            <p id="studentEmail">Email: johndoe@gmail.com</p>
+            <p id="studentRole">Role: Student</p>
+        </div>
+
+        <!-- Profile section for Admin -->
+        <div id="adminProfile" class="profile-details" style="display: none;">
+            <h3>Student Profiles</h3>
+            <div id="studentList">
+                <p>John Doe - johndoe@gmail.com</p>
+                <p>Jane Smith - janesmith@gmail.com</p>
+                <p>Sam Brown - sambrown@gmail.com</p>
+            </div>
+        </div>
+
+        <!-- Button links -->
+        <div class="button-container">
+            <a href="home.html">Back to Home</a>
+        </div>
+    </div>
+
+    <script>
+        // Example simulation of checking user role (In a real app, this would come from the backend)
+        var userRole = "student"; // Change this to "admin" to see the admin profile
+
+        // Function to display profile based on user role
+        function displayProfile() {
+            if (userRole === "student") {
+                document.getElementById("studentProfile").style.display = "block";
+                document.getElementById("adminProfile").style.display = "none";
+            } else if (userRole === "admin") {
+                document.getElementById("studentProfile").style.display = "none";
+                document.getElementById("adminProfile").style.display = "block";
+            }
+        }
+
+        // Call the function to display profile
+        displayProfile();
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Profile | Health and Wellness</title>
+    <style>
+        /* (Your previous styles go here) */
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>View Profile</h1>
+        
+        <!-- Profile section for Student -->
+        <div id="studentProfile" class="profile-details">
+            <h3>Your Profile</h3>
+            <p id="studentName">Name: John Doe</p>
+            <p id="studentEmail">Email: johndoe@gmail.com</p>
+            <p id="studentRole">Role: Student</p>
+        </div>
+
+        <!-- Profile section for Admin -->
+        <div id="adminProfile" class="profile-details" style="display: none;">
+            <h3>Student Profiles</h3>
+            <div id="studentList">
+                <p>John Doe - johndoe@gmail.com</p>
+                <p>Jane Smith - janesmith@gmail.com</p>
+                <p>Sam Brown - sambrown@gmail.com</p>
+            </div>
+        </div>
+
+        <!-- Button links -->
+        <div class="button-container">
+            <a href="home.html">Back to Home</a>
+        </div>
+    </div>
+
+    <script>
+        // Function to display profile based on user role
+        function displayProfile() {
+            // Retrieve user data from session storage
+            const email = sessionStorage.getItem("email");
+            const password = sessionStorage.getItem("password");
+            const role = sessionStorage.getItem("role");
+
+            // Display profile details for student
+            if (role === "student") {
+                document.getElementById("studentProfile").style.display = "block";
+                document.getElementById("adminProfile").style.display = "none";
+                document.getElementById("studentName").textContent = "Name: " + email.split('@')[0]; // Extract name from email
+                document.getElementById("studentEmail").textContent = "Email: " + email;
+                document.getElementById("studentRole").textContent = "Role: " + role;
+            } 
+            // Display profile details for admin
+            else if (role === "admin") {
+                document.getElementById("studentProfile").style.display = "none";
+                document.getElementById("adminProfile").style.display = "block";
+            }
+        }
+
+        // Call the function to display profile
+        displayProfile();
+    </script>
+
+</body>
+</html>

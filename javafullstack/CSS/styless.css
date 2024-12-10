@@ -1,0 +1,111 @@
+/* styles.css - Aesthetic, Pastel Theme */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #fdfdfd;
+    background-image: url('https://www.transparenttextures.com/patterns/tiny-grid.png'); 
+    /* Adds a light grid pattern */
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+.container, .login-container, .register-container, .dashboard-container, .appointment-container {
+    width: 90%;
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #f0f0f0;
+}
+h2 {
+    text-align: center;
+    color: #333;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+labelabel {
+    display: block;
+    margin: 10px 0 5px;
+    color: #555;
+    font-size: 16px;
+}
+input, select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    font-size: 14px;
+    margin-bottom: 20px;
+    color: #333;
+    outline: none;
+    transition: all 0.3s ease;
+}
+input:focus, select:focus, textarea:focus {
+    border-color: #9ddcdc;
+    background-color: #eef9f9;
+}
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #9ddcdc;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+button:hover {
+    background-color: #79c7c7;
+}
+a {
+    text-decoration: none;
+    color: #9ddcdc;
+}
+a:hover {
+    color: #79c7c7;
+    text-decoration: underline;
+}
+.dashboard-menu {
+    list-style: none;
+    padding: 0;
+}
+.dashboard-menu li {
+    margin: 10px 0;
+}
+.dashboard-menu a {
+    display: block;
+    padding: 12px;
+    background-color: #fdfdfd;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    color: #555;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+.dashboard-menu a:hover {
+    background-color: #f9f9f9;
+    border-color: #9ddcdc;
+}
+p {
+    text-align: center;
+    font-size: 14px;
+    color: #777;
+}
+input[type="date"], input[type="time"] {
+    padding: 10px;
+    background-color: #f4f4f4;
+}
+textarea {
+    resize: none;
+    height: 100px;
+    background-color: #f4f4f4;
+}
+::selection {
+    background-color: #9ddcdc;
+    color: white;
+}

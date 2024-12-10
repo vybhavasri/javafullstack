@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Records</title>
+    <style>
+        /* General body styling */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            background: url('https://www.transparenttextures.com/patterns/diamond-upholstery.png') repeat;
+            background-color: #f0f4c3;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            color: #333;
+        }
+
+        /* Main container */
+        .container {
+            text-align: center;
+            width: 90%;
+            max-width: 900px;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Heading */
+        h1 {
+            font-size: 32px;
+            color: #444;
+            margin-bottom: 20px;
+        }
+
+        /* Content paragraph */
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        /* Table styling */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 16px;
+            text-align: left;
+        }
+
+        table th, table td {
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+        }
+
+        table th {
+            background-color: #aed581;
+            color: white;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        table tr:nth-child(even) {
+            background-color: #f9fbe7;
+        }
+
+        table tr:hover {
+            background-color: #dcedc8;
+        }
+
+        /* Back button */
+        .back-button {
+            margin-top: 20px;
+            padding: 12px 20px;
+            background-color: #81c784;
+            color: white;
+            text-decoration: none;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .back-button:hover {
+            background-color: #66bb6a;
+            transform: translateY(-3px);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Health Records</h1>
+        <p>
+            Below is the student's health record, including recent checkups, health conditions, and prescriptions.
+        </p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Checkup Type</th>
+                    <th>Doctor's Notes</th>
+                    <th>Prescriptions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>2024-11-15</td>
+                    <td>General Checkup</td>
+                    <td>No major issues detected</td>
+                    <td>Multivitamins</td>
+                </tr>
+                <tr>
+                    <td>2024-10-10</td>
+                    <td>Dental Checkup</td>
+                    <td>Cavity found in molar</td>
+                    <td>Toothpaste with fluoride</td>
+                </tr>
+                <tr>
+                    <td>2024-09-01</td>
+                    <td>Eye Examination</td>
+                    <td>Slight vision correction required</td>
+                    <td>Anti-glare glasses</td>
+                </tr>
+                <tr>
+                    <td>2024-08-20</td>
+                    <td>Mental Health Session</td>
+                    <td>Recommended mindfulness exercises</td>
+                    <td>None</td>
+                </tr>
+            </tbody>
+        </table>
+        <a href="index.html" class="back-button">Go Back</a>
+    </div>
+</body>
+</html>

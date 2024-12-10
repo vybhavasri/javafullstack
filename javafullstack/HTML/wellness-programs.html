@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wellness Programs</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #e0f7fa 25%, #f9fbe7 100%);
+      background-attachment: fixed;
+      background-size: cover;
+    }
+
+    .program-container {
+      margin: 50px auto;
+      width: 80%;
+      max-width: 600px;
+      background: rgba(255, 255, 255, 0.8);
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .program-item {
+      background-color: #a8d5a8;
+      color: #fff;
+      border-radius: 8px;
+      margin: 10px 0;
+      padding: 15px;
+      cursor: pointer;
+      font-size: 16px;
+      text-align: center;
+      transition: background-color 0.3s ease, transform 0.2s;
+    }
+
+    .program-item:hover {
+      background-color: #85c785;
+      transform: translateY(-2px);
+    }
+
+    .program-details {
+      display: none;
+      background-color: #ffffff;
+      padding: 15px;
+      border-radius: 8px;
+      font-size: 14px;
+      color: #333;
+      margin-top: 5px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+      margin-top: 20px;
+      font-size: 24px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Wellness Programs</h1>
+  <div class="program-container">
+    <div class="program-item" onclick="toggleDetails('program1')">
+      Mindfulness and Meditation Sessions
+    </div>
+    <div class="program-details" id="program1">
+      <p><strong>Description:</strong> Participate in guided meditation and mindfulness exercises to reduce stress and enhance focus.</p>
+      <ul>
+        <li>Guided mindfulness exercises.</li>
+        <li>Breathing techniques and body scans.</li>
+        <li>Daily mindfulness tips for stress reduction.</li>
+      </ul>
+    </div>
+
+    <div class="program-item" onclick="toggleDetails('program2')">
+      Weekly Yoga Classes
+    </div>
+    <div class="program-details" id="program2">
+      <p><strong>Description:</strong> Enjoy weekly yoga sessions designed to improve flexibility, strength, and relaxation.</p>
+      <ul>
+        <li>Basic and advanced yoga asanas.</li>
+        <li>Pranayama (breathing exercises).</li>
+        <li>Guided relaxation and meditation.</li>
+      </ul>
+    </div>
+
+    <div class="program-item" onclick="toggleDetails('program3')">
+      Stress Management Workshops
+    </div>
+    <div class="program-details" id="program3">
+      <p><strong>Description:</strong> Learn effective stress management techniques through engaging workshops.</p>
+      <ul>
+        <li>Identifying stress triggers.</li>
+        <li>Time and priority management strategies.</li>
+        <li>Relaxation exercises like progressive muscle relaxation.</li>
+      </ul>
+    </div>
+
+    <div class="program-item" onclick="toggleDetails('program4')">
+      Group Therapy and Peer Support Programs
+    </div>
+    <div class="program-details" id="program4">
+      <p><strong>Description:</strong> Join group therapy sessions and peer support circles to connect and heal together.</p>
+      <ul>
+        <li>Facilitated group discussions.</li>
+        <li>Role-playing and problem-solving exercises.</li>
+        <li>Peer mentoring and feedback sessions.</li>
+      </ul>
+    </div>
+
+    <div class="program-item" onclick="toggleDetails('program5')">
+      Art and Music Therapy Activities
+    </div>
+    <div class="program-details" id="program5">
+      <p><strong>Description:</strong> Engage in creative art and music activities to express emotions and find relaxation.</p>
+      <ul>
+        <li>Painting and drawing workshops.</li>
+        <li>Guided music creation and listening.</li>
+        <li>Collaborative art projects for stress relief.</li>
+      </ul>
+    </div>
+
+    <div class="program-item" onclick="toggleDetails('program6')">
+      Fitness and Wellness Challenges
+    </div>
+    <div class="program-details" id="program6">
+      <p><strong>Description:</strong> Take part in fun fitness and wellness challenges to stay motivated and active.</p>
+      <ul>
+        <li>Step-count and workout challenges.</li>
+        <li>Team-based fitness competitions.</li>
+        <li>Setting and tracking personal health goals.</li>
+      </ul>
+    </div>
+
+    <div class="program-item" onclick="toggleDetails('program7')">
+      Nutritional Guidance and Healthy Cooking Classes
+    </div>
+    <div class="program-details" id="program7">
+      <p><strong>Description:</strong> Receive expert advice on nutrition and learn to cook healthy meals.</p>
+      <ul>
+        <li>Meal planning and balanced diet tips.</li>
+        <li>Cooking demonstrations of nutritious recipes.</li>
+        <li>Workshops on reading food labels and portion control.</li>
+      </ul>
+    </div>
+
+    <div class="program-item" onclick="toggleDetails('program8')">
+      Sleep Hygiene and Relaxation Techniques
+    </div>
+    <div class="program-details" id="program8">
+      <p><strong>Description:</strong> Discover techniques to improve sleep quality and practice relaxation exercises.</p>
+      <ul>
+        <li>Tips for improving sleep hygiene and creating a bedtime routine.</li>
+        <li>Relaxation techniques like progressive muscle relaxation.</li>
+        <li>Guided visualization for better sleep.</li>
+      </ul>
+    </div>
+  </div>
+
+  <script>
+    function toggleDetails(id) {
+      const details = document.getElementById(id);
+      details.style.display = details.style.display === "block" ? "none" : "block";
+    }
+  </script>
+</body>
+</html>

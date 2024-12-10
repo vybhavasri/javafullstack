@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Appointment | Health and Wellness</title>
+    <style>
+        /* General body styling */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to bottom right, #e3f2fd, #c8e6c9);
+            background-image: url('https://www.transparenttextures.com/patterns/cubes.png');
+            background-blend-mode: overlay;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            color: #333;
+        }
+
+        /* Main container */
+        .container {
+            text-align: center;
+            width: 90%;
+            max-width: 600px;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Title */
+        h1 {
+            font-size: 36px;
+            color: #2e7d32;
+            margin-bottom: 30px;
+        }
+
+        /* Form fields */
+        label {
+            font-size: 18px;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            font-size: 16px;
+        }
+
+        button {
+            padding: 15px;
+            background-color: #66bb6a;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        button:hover {
+            transform: scale(1.05);
+        }
+
+        /* Button container */
+        .button-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .button-container a {
+            text-decoration: none;
+            color: white;
+            padding: 15px 20px;
+            background-color: #66bb6a;
+            text-align: center;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Book Appointment</h1>
+
+        <form id="appointmentForm" action="http://localhost:3000/book-appointment" method="POST">
+            <label for="appointmentDate">Select Appointment Date:</label>
+            <input type="date" id="appointmentDate" name="appointmentDate" required>
+        
+            <label for="appointmentTime">Select Appointment Time:</label>
+            <input type="time" id="appointmentTime" name="appointmentTime" required>
+        
+            <label for="appointmentType">Select Appointment Type:</label>
+            <select id="appointmentType" name="appointmentType">
+                <option value="Health Checkup">Health Checkup</option>
+                <option value="Mental Health Counseling">Mental Health Counseling</option>
+                <option value="Fitness Consultation">Fitness Consultation</option>
+            </select>
+        
+            <button type="submit">Book Appointment</button>
+        </form>
+        
+        
+
+        <div class="button-container">
+            <a href="view-appointments.html">View Appointments</a>
+        </div>
+    </div>
+
+    <script>
+        // Function to save the appointment data in localStorage
+        document.getElementById("appointmentForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent form submission
+
+            const appointmentDate = document.getElementById("appointmentDate").value;
+            const appointmentTime = document.getElementById("appointmentTime").value;
+            const appointmentType = document.getElementById("appointmentType").value;
+
+            // Create appointment object
+            const appointment = {
+                date: appointmentDate,
+                time: appointmentTime,
+                type: appointmentType
+            };
+
+            // Save the appointment data to localStorage
+            localStorage.setItem("appointment", JSON.stringify(appointment));
+
+            alert("Appointment booked successfully!");
+        });
+    </script>
+
+</body>
+</html>
